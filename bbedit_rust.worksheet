@@ -5,6 +5,786 @@
 	<key>CurrentWorkingDirectory</key>
 	<string>/Users/deverman</string>
 	<key>WorksheetContents</key>
-	<string></string>
+	<string>ls
+README.md
+bbedit_rust.worksheet
+hello
+git add bbedit_rust.worksheet
+git commit
+error: Terminal is dumb, but EDITOR unset
+Please supply the message using either -m or -F option.
+git commit -m bbedit
+
+cargo new mandelbrot --vcs none
+     Created binary (application) `mandelbrot` package
+ls
+README.md
+bbedit_rust.worksheet
+hello
+mandelbrot
+cd mandelbrot
+cargo add num
+    Updating crates.io index
+warning: spurious network error (3 tries remaining): [28] Timeout was reached (Could not resolve host: index.crates.io)
+ls 
+warning: spurious network error (2 tries remaining): [28] Timeout was reached (Resolving timed out after 30001 milliseconds)
+warning: spurious network error (1 tries remaining): [28] Timeout was reached (Could not resolve host: index.crates.io)
+Cargo.toml
+src
+error: failed to query replaced source registry `crates-io`
+
+Caused by:
+  download of config.json failed
+
+Caused by:
+  failed to download from `https://index.crates.io/config.json`
+
+Caused by:
+  [28] Timeout was reached (Resolving timed out after 30000 milliseconds)
+
+cd ~/Documents/Code/rust/Ex_Files_Rust_EssT_2021/Exercise\ Files/02_02_integer_data/end/integer_data
+cargo run
+   Compiling integer_data v0.1.0 (/Users/deverman/Documents/Code/rust/Ex_Files_Rust_EssT_2021/Exercise Files/02_02_integer_data/end/integer_data)
+    Finished dev [unoptimized + debuginfo] target(s) in 10.08s
+     Running `target/debug/integer_data`
+thread 'main' panicked at 'attempt to add with overflow', src/main.rs:3:9
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+cargo run
+    Finished dev [unoptimized + debuginfo] target(s) in 0.01s
+     Running `target/debug/integer_data`
+thread 'main' panicked at 'attempt to add with overflow', src/main.rs:3:9
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+ls
+Cargo.lock
+Cargo.toml
+src
+target
+pwd
+/Users/deverman/Documents/Code/rust/Ex_Files_Rust_EssT_2021/Exercise Files/02_02_integer_data/end/integer_data
+cd src
+ls
+main.rs
+bbedit main.rs
+cd ~/Documents/Code/rust/rustlearnings/mandelbrot
+cargo run
+   Compiling mandelbrot v0.1.0 (/Users/deverman/Documents/Code/rust/rustlearnings/mandelbrot)
+error[E0433]: failed to resolve: use of undeclared crate or module `num`
+ --&gt; src/main.rs:1:5
+  |
+1 | use num::complex::Complex;
+  |     ^^^ use of undeclared crate or module `num`
+
+error[E0425]: cannot find value `img_x` in this scope
+  --&gt; src/main.rs:21:21
+   |
+21 |             let x_percent = (img_x as f64 / width as f64);
+   |                              ^^^^^ help: a local variable with a similar name exists: `img_y`
+
+error[E0425]: cannot find value `all_rows` in this scope
+  --&gt; src/main.rs:29:2
+   |
+29 |     all_rows.push(row);
+   |     ^^^^^^^^ not found in this scope
+
+warning: unnecessary parentheses around assigned value
+  --&gt; src/main.rs:21:20
+   |
+21 |             let x_percent = (img_x as f64 / width as f64);
+   |                             ^                           ^
+   |
+   = note: `#[warn(unused_parens)]` on by default
+help: remove these parentheses
+   |
+21 -             let x_percent = (img_x as f64 / width as f64);
+21 +             let x_percent = img_x as f64 / width as f64;
+   |
+
+warning: unnecessary parentheses around assigned value
+  --&gt; src/main.rs:22:20
+   |
+22 |             let y_percent = (img_y as f64 / height as f64);
+   |                             ^                            ^
+   |
+help: remove these parentheses
+   |
+22 -             let y_percent = (img_y as f64 / height as f64);
+22 +             let y_percent = img_y as f64 / height as f64;
+   |
+
+libunwind: malformed __unwind_info at 0x1907FECA8 bad second level page
+libunwind: malformed __unwind_info at 0x1907FECA8 bad second level page
+libunwind: malformed __unwind_info at 0x1907FECA8 bad second level page
+libunwind: malformed __unwind_info at 0x1907FECA8 bad second level page
+libunwind: malformed __unwind_info at 0x1907FECA8 bad second level page
+libunwind: malformed __unwind_info at 0x1907FECA8 bad second level page
+libunwind: malformed __unwind_info at 0x1907FECA8 bad second level page
+libunwind: malformed __unwind_info at 0x1907FECA8 bad second level page
+libunwind: malformed __unwind_info at 0x1907FECA8 bad second level page
+libunwind: malformed __unwind_info at 0x1907FECA8 bad second level page
+libunwind: malformed __unwind_info at 0x1907FECA8 bad second level page
+libunwind: malformed __unwind_info at 0x1907FECA8 bad second level page
+libunwind: malformed __unwind_info at 0x1907FECA8 bad second level page
+Some errors have detailed explanations: E0425, E0433.
+For more information about an error, try `rustc --explain E0425`.
+warning: `mandelbrot` (bin "mandelbrot") generated 2 warnings
+error: could not compile `mandelbrot` (bin "mandelbrot") due to 3 previous errors; 2 warnings emitted
+cargo add num
+    Updating crates.io index
+      Adding num v0.4.1 to dependencies.
+             Features:
+             + std
+             - alloc
+             - libm
+             - num-bigint
+             - rand
+             - serde
+    Updating crates.io index
+ls 
+Cargo.lock
+Cargo.toml
+src
+target
+bbedit Cargo.toml
+
+cargo run
+ Downloading crates ...
+  Downloaded num v0.4.1
+  Downloaded num-iter v0.1.43
+  Downloaded num-traits v0.2.17
+  Downloaded num-rational v0.4.1
+  Downloaded autocfg v1.1.0
+  Downloaded num-integer v0.1.45
+  Downloaded num-complex v0.4.4
+  Downloaded num-bigint v0.4.4
+   Compiling autocfg v1.1.0
+   Compiling num-traits v0.2.17
+   Compiling num-integer v0.1.45
+   Compiling num-bigint v0.4.4
+   Compiling num-rational v0.4.1
+   Compiling num-iter v0.1.43
+   Compiling num-complex v0.4.4
+   Compiling num v0.4.1
+   Compiling mandelbrot v0.1.0 (/Users/deverman/Documents/Code/rust/rustlearnings/mandelbrot)
+error[E0425]: cannot find value `img_x` in this scope
+  --&gt; src/main.rs:21:21
+   |
+21 |             let x_percent = (img_x as f64 / width as f64);
+   |                              ^^^^^ help: a local variable with a similar name exists: `img_y`
+
+error[E0425]: cannot find value `all_rows` in this scope
+  --&gt; src/main.rs:29:2
+   |
+29 |     all_rows.push(row);
+   |     ^^^^^^^^ not found in this scope
+
+warning: unnecessary parentheses around assigned value
+  --&gt; src/main.rs:21:20
+   |
+21 |             let x_percent = (img_x as f64 / width as f64);
+   |                             ^                           ^
+   |
+   = note: `#[warn(unused_parens)]` on by default
+help: remove these parentheses
+   |
+21 -             let x_percent = (img_x as f64 / width as f64);
+21 +             let x_percent = img_x as f64 / width as f64;
+   |
+
+warning: unnecessary parentheses around assigned value
+  --&gt; src/main.rs:22:20
+   |
+22 |             let y_percent = (img_y as f64 / height as f64);
+   |                             ^                            ^
+   |
+help: remove these parentheses
+   |
+22 -             let y_percent = (img_y as f64 / height as f64);
+22 +             let y_percent = img_y as f64 / height as f64;
+   |
+
+libunwind: malformed __unwind_info at 0x1907FECA8 bad second level page
+libunwind: malformed __unwind_info at 0x1907FECA8 bad second level page
+libunwind: malformed __unwind_info at 0x1907FECA8 bad second level page
+libunwind: malformed __unwind_info at 0x1907FECA8 bad second level page
+For more information about this error, try `rustc --explain E0425`.
+warning: `mandelbrot` (bin "mandelbrot") generated 2 warnings
+error: could not compile `mandelbrot` (bin "mandelbrot") due to 2 previous errors; 2 warnings emitted
+cargo run
+   Compiling mandelbrot v0.1.0 (/Users/deverman/Documents/Code/rust/rustlearnings/mandelbrot)
+error[E0425]: cannot find value `all_rows` in this scope
+  --&gt; src/main.rs:29:2
+   |
+29 |     all_rows.push(row);
+   |     ^^^^^^^^ not found in this scope
+
+warning: unnecessary parentheses around assigned value
+  --&gt; src/main.rs:21:20
+   |
+21 |             let x_percent = (img_x as f64 / width as f64);
+   |                             ^                           ^
+   |
+   = note: `#[warn(unused_parens)]` on by default
+help: remove these parentheses
+   |
+21 -             let x_percent = (img_x as f64 / width as f64);
+21 +             let x_percent = img_x as f64 / width as f64;
+   |
+
+warning: unnecessary parentheses around assigned value
+  --&gt; src/main.rs:22:20
+   |
+22 |             let y_percent = (img_y as f64 / height as f64);
+   |                             ^                            ^
+   |
+help: remove these parentheses
+   |
+22 -             let y_percent = (img_y as f64 / height as f64);
+22 +             let y_percent = img_y as f64 / height as f64;
+   |
+
+libunwind: malformed __unwind_info at 0x1907FECA8 bad second level page
+libunwind: malformed __unwind_info at 0x1907FECA8 bad second level page
+libunwind: malformed __unwind_info at 0x1907FECA8 bad second level page
+For more information about this error, try `rustc --explain E0425`.
+warning: `mandelbrot` (bin "mandelbrot") generated 2 warnings
+error: could not compile `mandelbrot` (bin "mandelbrot") due to previous error; 2 warnings emitted
+cargo run
+   Compiling mandelbrot v0.1.0 (/Users/deverman/Documents/Code/rust/rustlearnings/mandelbrot)
+warning: unnecessary parentheses around assigned value
+  --&gt; src/main.rs:21:20
+   |
+21 |             let x_percent = (img_x as f64 / width as f64);
+   |                             ^                           ^
+   |
+   = note: `#[warn(unused_parens)]` on by default
+help: remove these parentheses
+   |
+21 -             let x_percent = (img_x as f64 / width as f64);
+21 +             let x_percent = img_x as f64 / width as f64;
+   |
+
+warning: unnecessary parentheses around assigned value
+  --&gt; src/main.rs:22:20
+   |
+22 |             let y_percent = (img_y as f64 / height as f64);
+   |                             ^                            ^
+   |
+help: remove these parentheses
+   |
+22 -             let y_percent = (img_y as f64 / height as f64);
+22 +             let y_percent = img_y as f64 / height as f64;
+   |
+
+warning: multiple patterns overlap on their endpoints
+  --&gt; src/main.rs:62:5
+   |
+61 |                 0..=2 =&gt; ' ',
+   |                 ----- this range overlaps on `2_usize`...
+62 |                 2..=5 =&gt; '.',
+   |                 ^^^^^ ... with this range
+   |
+   = note: you likely meant to write mutually exclusive ranges
+   = note: `#[warn(overlapping_range_endpoints)]` on by default
+
+warning: multiple patterns overlap on their endpoints
+  --&gt; src/main.rs:63:5
+   |
+62 |                 2..=5 =&gt; '.',
+   |                 ----- this range overlaps on `5_usize`...
+63 |                 5..=10 =&gt; '•',
+   |                 ^^^^^^ ... with this range
+   |
+   = note: you likely meant to write mutually exclusive ranges
+
+warning: multiple patterns overlap on their endpoints
+  --&gt; src/main.rs:65:5
+   |
+64 |                 11..=30 =&gt; '*',
+   |                 ------- this range overlaps on `30_usize`...
+65 |                 30..=100 =&gt; '+',
+   |                 ^^^^^^^^ ... with this range
+   |
+   = note: you likely meant to write mutually exclusive ranges
+
+warning: multiple patterns overlap on their endpoints
+  --&gt; src/main.rs:66:5
+   |
+65 |                 30..=100 =&gt; '+',
+   |                 -------- this range overlaps on `100_usize`...
+66 |                 100..=200 =&gt; 'x',
+   |                 ^^^^^^^^^ ... with this range
+   |
+   = note: you likely meant to write mutually exclusive ranges
+
+warning: multiple patterns overlap on their endpoints
+  --&gt; src/main.rs:67:5
+   |
+66 |                 100..=200 =&gt; 'x',
+   |                 --------- this range overlaps on `200_usize`...
+67 |                 200..=400 =&gt; '$',
+   |                 ^^^^^^^^^ ... with this range
+   |
+   = note: you likely meant to write mutually exclusive ranges
+
+warning: multiple patterns overlap on their endpoints
+  --&gt; src/main.rs:68:5
+   |
+67 |                 200..=400 =&gt; '$',
+   |                 --------- this range overlaps on `400_usize`...
+68 |                 400..=700 =&gt; '#',
+   |                 ^^^^^^^^^ ... with this range
+   |
+   = note: you likely meant to write mutually exclusive ranges
+
+warning: `mandelbrot` (bin "mandelbrot") generated 8 warnings (run `cargo fix --bin "mandelbrot"` to apply 2 suggestions)
+    Finished dev [unoptimized + debuginfo] target(s) in 2.72s
+     Running `target/debug/mandelbrot`
+                                                                                                    
+cargo run
+   Compiling mandelbrot v0.1.0 (/Users/deverman/Documents/Code/rust/rustlearnings/mandelbrot)
+warning: unnecessary parentheses around assigned value
+  --&gt; src/main.rs:21:20
+   |
+21 |             let x_percent = (img_x as f64 / width as f64);
+   |                             ^                           ^
+   |
+   = note: `#[warn(unused_parens)]` on by default
+help: remove these parentheses
+   |
+21 -             let x_percent = (img_x as f64 / width as f64);
+21 +             let x_percent = img_x as f64 / width as f64;
+   |
+
+warning: unnecessary parentheses around assigned value
+  --&gt; src/main.rs:22:20
+   |
+22 |             let y_percent = (img_y as f64 / height as f64);
+   |                             ^                            ^
+   |
+help: remove these parentheses
+   |
+22 -             let y_percent = (img_y as f64 / height as f64);
+22 +             let y_percent = img_y as f64 / height as f64;
+   |
+
+warning: `mandelbrot` (bin "mandelbrot") generated 2 warnings (run `cargo fix --bin "mandelbrot"` to apply 2 suggestions)
+    Finished dev [unoptimized + debuginfo] target(s) in 3.70s
+     Running `target/debug/mandelbrot`
+                                                                                                    
+cargo fix --bin "mandelbrot"
+error: the working directory of this package has uncommitted changes, and `cargo fix` can potentially perform destructive changes; if you'd like to suppress this error pass `--allow-dirty`, `--allow-staged`, or commit the changes to these files:
+
+  * mandelbrot/ (dirty)
+
+cargo fix --bin "mandelbrot"
+error: the working directory of this package has uncommitted changes, and `cargo fix` can potentially perform destructive changes; if you'd like to suppress this error pass `--allow-dirty`, `--allow-staged`, or commit the changes to these files:
+
+  * mandelbrot/Cargo.toml (dirty)
+
+
+git config --global core.editor "bbedit -w"
+
+
+cargo fix --bin "mandelbrot"
+error: the working directory of this package has uncommitted changes, and `cargo fix` can potentially perform destructive changes; if you'd like to suppress this error pass `--allow-dirty`, `--allow-staged`, or commit the changes to these files:
+
+  * mandelbrot/Cargo.toml (staged)
+
+cargo fix --bin "mandelbrot"
+    Checking num-traits v0.2.17
+    Checking num-integer v0.1.45
+    Checking num-complex v0.4.4
+    Checking num-bigint v0.4.4
+    Checking num-iter v0.1.43
+    Checking num-rational v0.4.1
+    Checking num v0.4.1
+    Checking mandelbrot v0.1.0 (/Users/deverman/Documents/Code/rust/rustlearnings/mandelbrot)
+       Fixed src/main.rs (2 fixes)
+    Finished dev [unoptimized + debuginfo] target(s) in 1.53s
+
+cargo run
+   Compiling mandelbrot v0.1.0 (/Users/deverman/Documents/Code/rust/rustlearnings/mandelbrot)
+    Finished dev [unoptimized + debuginfo] target(s) in 3.47s
+     Running `target/debug/mandelbrot`
+                                                                                                    
+cd ..
+ls 
+README.md
+bbedit_rust.worksheet
+hello
+mandelbrot
+cargo new ch2-add-with-lifetimes
+     Created binary (application) `ch2-add-with-lifetimes` package
+cd ch2-add-with-lifetimes
+cargo run
+   Compiling ch2-add-with-lifetimes v0.1.0 (/Users/deverman/Documents/Code/rust/rustlearnings/ch2-add-with-lifetimes)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.17s
+     Running `target/debug/ch2-add-with-lifetimes`
+30
+
+cargo new challenge_avg
+     Created binary (application) `challenge_avg` package
+ls ..
+README.md
+bbedit_rust.worksheet
+ch2-add-with-lifetimes
+hello
+mandelbrot
+pwd
+/Users/deverman/Documents/Code/rust/rustlearnings/ch2-add-with-lifetimes
+cd ..
+cd challenge_avg
+cd: no such file or directory: challenge_avg
+ls - al
+ls: -: No such file or directory
+ls: al: No such file or directory
+ls -al
+total 40
+drwxr-xr-x  11 deverman  staff   352 Nov 12 17:41 .
+drwxr-xr-x   8 deverman  staff   256 Nov 11 23:00 ..
+-rw-r--r--@  1 deverman  staff  6148 Nov 12 17:41 .DS_Store
+drwxr-xr-x  13 deverman  staff   416 Nov 12 17:24 .git
+-rw-r--r--   1 deverman  staff   414 Nov  5 07:26 .gitignore
+-rw-r--r--   1 deverman  staff    56 Nov  5 07:26 README.md
+-rw-r--r--@  1 deverman  staff   307 Nov 10 20:15 bbedit_rust.worksheet
+drwxr-xr-x   6 deverman  staff   192 Nov 12 17:41 ch2-add-with-lifetimes
+drwxr-xr-x   4 deverman  staff   128 Nov 12 17:37 challenge_avg
+drwxr-xr-x   6 deverman  staff   192 Nov  5 17:50 hello
+drwxr-xr-x   6 deverman  staff   192 Nov 11 23:00 mandelbrot
+cd challenge_avg
+cargo run
+   Compiling challenge_avg v0.1.0 (/Users/deverman/Documents/Code/rust/rustlearnings/challenge_avg)
+warning: unnecessary parentheses around assigned value
+ --&gt; src/main.rs:8:19
+  |
+8 |     let average = (total/3.0);
+  |                   ^         ^
+  |
+  = note: `#[warn(unused_parens)]` on by default
+help: remove these parentheses
+  |
+8 -     let average = (total/3.0);
+8 +     let average = total/3.0;
+  |
+
+warning: `challenge_avg` (bin "challenge_avg") generated 1 warning (run `cargo fix --bin "challenge_avg"` to apply 1 suggestion)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.10s
+     Running `target/debug/challenge_avg`
+Test passed!
+pwd
+/Users/deverman/Documents/Code/rust/rustlearnings/challenge_avg
+cd ..
+cargo new celsius_to_fahrenheit
+     Created binary (application) `celsius_to_fahrenheit` package
+cd celsius_to_fahrenheit
+cargo run
+   Compiling celsius_to_fahrenheit v0.1.0 (/Users/deverman/Documents/Code/rust/rustlearnings/celsius_to_fahrenheit)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.19s
+     Running `target/debug/celsius_to_fahrenheit`
+Test passed!
+cd ..
+cargo new challenge_max_min_mean
+     Created binary (application) `challenge_max_min_mean` package
+cd challenge_max_min_mean
+ls 
+Cargo.toml
+src
+cd src
+ls
+main.rs
+bbedit main.rs
+cargo run
+   Compiling challenge_max_min_mean v0.1.0 (/Users/deverman/Documents/Code/rust/rustlearnings/celsius_to_fahrenheit/challenge_max_min_mean)
+warning: variable does not need to be mutable
+ --&gt; src/main.rs:5:9
+  |
+5 |     let mut mean: f64;
+  |         ----^^^^
+  |         |
+  |         help: remove this `mut`
+  |
+  = note: `#[warn(unused_mut)]` on by default
+
+warning: `challenge_max_min_mean` (bin "challenge_max_min_mean") generated 1 warning (run `cargo fix --bin "challenge_max_min_mean"` to apply 1 suggestion)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.13s
+     Running `/Users/deverman/Documents/Code/rust/rustlearnings/celsius_to_fahrenheit/challenge_max_min_mean/target/debug/challenge_max_min_mean`
+Tests passed!
+ls
+852RebootHK (E20) - Brent Deverman, Now Shenzhen-YH5Uw7uIwvs.mp4
+Applications
+Desktop
+Documents
+Downloads
+Interview with Brent Deverman on CCTV4-nARFMyApfp8.mkv
+Library
+Misc.
+Movies
+Music
+My Drive
+Pictures
+Polo Pool Party by NowShenzhen.com-fqVOuvyvsPQ.mkv
+Public
+Shenzhen Gucci Store Grand Opening-r3MACrolkVc.mkv
+Shenzhen Marketplace 1982--R8cbOg1tHw.mp4
+Tour of Duke's Brunch at The Langham, Shenzhen-blHViqkjNuE.mkv
+U Bar Hip Hop Cream Party from NowShenzhen.com-h7x_QRQNd9U.mp4
+openai_api_key.txt
+setup-new-mac-via-command-line
+styles
+cd Documents/Code
+ls
+HTML5-Speedy-Video-Extension
+Icon
+
+Inkplate
+Inkplate-micropython
+OFScripts
+anki-deck-for-duolingo-chinese
+aws
+chia-blockchain
+codellama
+covid
+damus
+deverman
+docker ipfs.txt
+first-contributions
+keyboardmaestro
+markdown-guide
+markdown-test
+pcrm
+python sandbox
+report
+rest_server
+rust
+script-commands
+services
+services-6.x-3.x
+setup-new-mac-via-command-line
+setup-new-mac-via-command-line.back
+shenzhenfamily
+shenzhenpizza
+sites.txt
+sonos-hue
+spacedrive
+stripe-payments-demo
+swift
+swifthello.sh
+test.py
+tornado-cli
+weather
+whisper.cpp
+yanmss
+cd rust
+ls
+Ex_Files_Rust_EssT_2021
+adventcode2023
+hello
+hello2
+rust-in-action
+rustlearnings
+cd adventcode2023
+
+ls
+open .
+cd ..
+ls
+Appointment2.pdf
+Ex_Files_Rust_EssT_2021.zip
+IMG_1386.jpeg
+Lasso.dmg
+Screenshot 2023-09-14 at 8.00.00 AM.png
+Screenshot 2023-09-17 at 1.08.04 PM.png
+Screenshot 2023-10-29 at 2.35.13 PM.png
+Sonos_75.1-46030.dmg
+adventcode2023
+reality
+untitled folder
+user_stories.csv
+‎Replay 2023 - Apple Music.html
+cd ~
+ls
+852RebootHK (E20) - Brent Deverman, Now Shenzhen-YH5Uw7uIwvs.mp4
+Applications
+Desktop
+Documents
+Downloads
+Interview with Brent Deverman on CCTV4-nARFMyApfp8.mkv
+Library
+Misc.
+Movies
+Music
+My Drive
+Pictures
+Polo Pool Party by NowShenzhen.com-fqVOuvyvsPQ.mkv
+Public
+Shenzhen Gucci Store Grand Opening-r3MACrolkVc.mkv
+Shenzhen Marketplace 1982--R8cbOg1tHw.mp4
+Tour of Duke's Brunch at The Langham, Shenzhen-blHViqkjNuE.mkv
+U Bar Hip Hop Cream Party from NowShenzhen.com-h7x_QRQNd9U.mp4
+openai_api_key.txt
+setup-new-mac-via-command-line
+styles
+cd Documents/Code
+ls
+HTML5-Speedy-Video-Extension
+Icon
+
+Inkplate
+Inkplate-micropython
+OFScripts
+anki-deck-for-duolingo-chinese
+aws
+chia-blockchain
+codellama
+covid
+damus
+deverman
+docker ipfs.txt
+first-contributions
+keyboardmaestro
+markdown-guide
+markdown-test
+pcrm
+python sandbox
+report
+rest_server
+rust
+script-commands
+services
+services-6.x-3.x
+setup-new-mac-via-command-line
+setup-new-mac-via-command-line.back
+shenzhenfamily
+shenzhenpizza
+sites.txt
+sonos-hue
+spacedrive
+stripe-payments-demo
+swift
+swifthello.sh
+test.py
+tornado-cli
+weather
+whisper.cpp
+yanmss
+cd rust
+ls
+Ex_Files_Rust_EssT_2021
+hello
+hello2
+rust-in-action
+rustlearnings
+cd rustlearnings
+ls
+README.md
+adventofcode2023
+bbedit_rust.worksheet
+celsius_to_fahrenheit
+ch2-add-with-lifetimes
+challenge_avg
+hello
+mandelbrot
+rust-learning-path
+cd adventofcode2023
+ls
+day1_1
+cd day1_1
+ls
+Cargo.lock
+Cargo.toml
+src
+target
+cd src
+ls
+main.rs
+puzzle.txt
+puzzlebaseline.txt
+puzzleinput.txt
+cargo run
+   Compiling day1_1 v0.1.0 (/Users/deverman/Documents/Code/rust/rustlearnings/adventofcode2023/day1_1)
+error[E0432]: unresolved import `regex`
+ --&gt; src/main.rs:4:5
+  |
+4 | use regex::Regex;
+  |     ^^^^^ help: a similar path exists: `grep::regex`
+
+libunwind: malformed __unwind_info at 0x189EDACA8 bad second level page
+libunwind: malformed __unwind_info at 0x189EDACA8 bad second level page
+libunwind: malformed __unwind_info at 0x189EDACA8 bad second level page
+libunwind: malformed __unwind_info at 0x189EDACA8 bad second level page
+libunwind: malformed __unwind_info at 0x189EDACA8 bad second level page
+libunwind: malformed __unwind_info at 0x189EDACA8 bad second level page
+For more information about this error, try `rustc --explain E0432`.
+error: could not compile `day1_1` (bin "day1_1") due to previous error
+cd ~/Documents/Code/rust/rust-in-action/code
+git pull
+Already up to date.
+cd ~/Documents/Code/rust/rustlearnings/rustinaction
+cargo new grep-lite
+     Created binary (application) `grep-lite` package
+cd grep-lite
+cd src
+ls
+main.rs
+cargo run
+ls
+main.rs
+pwd
+/Users/deverman/Documents/Code/rust/rustlearnings/rustinaction/grep-lite/src
+cargo add regex@1
+    Updating crates.io index
+      Adding regex v1 to dependencies.
+             Features as of v1.0.0:
+             + use_std
+             - pattern
+             - unstable
+    Updating crates.io index
+cargo doc
+    Checking memchr v2.6.4
+    Checking regex-syntax v0.8.2
+ Documenting memchr v2.6.4
+ Documenting regex-syntax v0.8.2
+    Checking aho-corasick v1.1.2
+ Documenting aho-corasick v1.1.2
+    Checking regex-automata v0.4.3
+ Documenting regex-automata v0.4.3
+    Checking regex v1.10.2
+ Documenting regex v1.10.2
+ Documenting grep-lite v0.1.0 (/Users/deverman/Documents/Code/rust/rustlearnings/rustinaction/grep-lite)
+    Finished dev [unoptimized + debuginfo] target(s) in 2.48s
+cargo doc --open
+    Finished dev [unoptimized + debuginfo] target(s) in 0.31s
+     Opening /Users/deverman/Documents/Code/rust/rustlearnings/rustinaction/grep-lite/target/doc/grep_lite/index.html
+
+
+cd ~/Documents/Code/rust/rustlearnings/adventofcode2023/day1_1
+cargo add regex@1
+    Updating crates.io index
+      Adding regex v1 to dependencies.
+             Features as of v1.0.0:
+             + use_std
+             - pattern
+             - unstable
+    Updating crates.io index
+cd ~/Documents/Code/rust/rustlearnings/
+ls
+README.md
+adventofcode2023
+bbedit_rust.worksheet
+celsius_to_fahrenheit
+ch2-add-with-lifetimes
+challenge_avg
+grep-lite
+hello
+mandelbrot
+rust-learning-path
+rustinaction
+cargo new ch2-read-file
+     Created binary (application) `ch2-read-file` package
+cargo new ch2-bufreader-lines
+     Created binary (application) `ch2-bufreader-lines` package
+
+</string>
 </dict>
 </plist>
